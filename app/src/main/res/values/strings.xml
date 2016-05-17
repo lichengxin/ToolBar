@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ToolBar</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="title_activity_pull_refresh">PullRefreshActivity</string>
+    <string name="title_activity_swip_refresh_layout">SwipRefreshLayout</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="tab_one">精选</string>
+    <string name="tab_two">理财</string>
+    <string name="tab_three">借款</string>
+    <string name="tab_four">我的</string>
+    <string name="buttomName">底部菜单栏</string>
+    <string name="guideName">引导页</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_view_pager_indicator">ViewPagerIndicatorActivity</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
+</resources>
