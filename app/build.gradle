@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:support-v4:23.4.0'
     compile 'fr.baloomba:viewpagerindicator:2.4.2'
     compile project(':viewPagerIndicator_Library')
+    compile project(':library')
 }
