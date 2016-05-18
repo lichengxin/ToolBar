@@ -6,6 +6,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.android.toolbar.R;
+import com.android.toolbar.contants.Urlcontants;
+import com.android.toolbar.http.HttpUtil;
+import com.android.toolbar.utils.LogUtils;
+import com.android.volley.VolleyError;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -26,6 +30,22 @@ public class SwipRefreshLayout extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("官方刷新");
 
+        initData();
+
+    }
+
+    private void initData() {
+        HttpUtil.getInstance(getApplicationContext()).sendGetRequest(Urlcontants.NEWS, new HttpUtil.HttpListener() {
+            @Override
+            public void onResponse(String response) {
+                LogUtils.logE(SwipRefreshLayout.class,"=="+response);
+            }
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
     }
 
     @Override
