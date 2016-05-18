@@ -8,9 +8,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.android.toolbar.R;
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 
 import java.util.HashMap;
@@ -39,19 +41,20 @@ public class TabFragment1 extends Fragment implements BaseSliderView.OnSliderCli
 
     private void initBanner() {
         HashMap<String, Integer> file_maps = new HashMap<>();
+        file_maps.put("default_hxbanner", R.mipmap.default_hxbanner);
         file_maps.put("Hannibal", R.mipmap.hannibal);
         file_maps.put("Big Bang Theory", R.mipmap.bigbang);
         file_maps.put("House of Cards", R.mipmap.house);
         file_maps.put("Game of Thrones", R.mipmap.game_of_thrones);
-        for (String name:file_maps.keySet()){
-            TextSliderView textSliderView = new TextSliderView(getActivity());
-            textSliderView.description(name)
+        for (String name : file_maps.keySet()) {
+            DefaultSliderView textSliderView = new DefaultSliderView(getActivity());
+            textSliderView
                     .image(file_maps.get(name))
                     .setScaleType(BaseSliderView.ScaleType.Fit)
                     .setOnSliderClickListener(this);
 
-            textSliderView.bundle(new Bundle());
-            textSliderView.getBundle().putString("extra", name);
+//            textSliderView.bundle(new Bundle());
+//            textSliderView.getBundle().putString("extra", name);
             mSlider.addSlider(textSliderView);
 
         }
@@ -59,7 +62,8 @@ public class TabFragment1 extends Fragment implements BaseSliderView.OnSliderCli
         mSlider.setPresetTransformer(SliderLayout.Transformer.Default);
         //设置indicator位置
         mSlider.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
-
+//        mSlider.setCustomAnimation(new DescriptionAnimation());
+        mSlider.setDuration(3000);
     }
 
     @Override
@@ -69,7 +73,13 @@ public class TabFragment1 extends Fragment implements BaseSliderView.OnSliderCli
     }
 
     @Override
+    public void onStop() {
+        mSlider.stopAutoCycle();
+        super.onStop();
+    }
+
+    @Override
     public void onSliderClick(BaseSliderView slider) {
-        Toast.makeText(getActivity(),slider.getBundle().getString("extra")+"===",Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), slider.getBundle().getString("extra") + "===", Toast.LENGTH_LONG).show();
     }
 }
