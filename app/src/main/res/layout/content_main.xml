@@ -38,5 +38,14 @@
             android:text="viewPagerIndicator" />
 
 
+            <Button
+                android:id="@+id/dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Dialog弹框" />
+
+
+
     </LinearLayout>
 </ScrollView>

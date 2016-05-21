@@ -68,6 +68,10 @@
         <activity
             android:name=".activity.GuideActivity"
             android:label="@string/title_activity_guide"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.DialogActivity"
+            android:label="@string/title_activity_dialog"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.toolbar.activity.SwipRefreshLayout">
+    android:fitsSystemWindows="true"
+    tools:context="com.android.toolbar.activity.DialogActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,10 +20,8 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <include layout="@layout/content_swip_refresh_layout" />
-
+        <include layout="@layout/content_dialog" />
     </LinearLayout>
-
 
 
 </android.support.design.widget.CoordinatorLayout>

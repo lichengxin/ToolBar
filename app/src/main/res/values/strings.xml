@@ -18,4 +18,5 @@
     <string name="title_activity_view_pager_indicator">ViewPagerIndicatorActivity</string>
     <string name="title_activity_view_pager">ViewPagerActivity</string>
     <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_dialog">DialogActivity</string>
 </resources>

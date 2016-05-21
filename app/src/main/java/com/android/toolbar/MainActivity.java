@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.toolbar.activity.BaseActivity;
+import com.android.toolbar.activity.DialogActivity;
 import com.android.toolbar.activity.PullRefreshActivity;
 import com.android.toolbar.activity.SwipRefreshLayout;
 import com.android.toolbar.activity.TabActivity;
@@ -47,7 +48,7 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.btn1, R.id.swipRefresh, R.id.tab, R.id.viewPagerIndicator})
+    @OnClick({R.id.btn1, R.id.swipRefresh, R.id.tab, R.id.viewPagerIndicator,R.id.dialog})
     public void submit(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -61,6 +62,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.viewPagerIndicator:
                 startActivity(new Intent(getApplicationContext(), ViewPagerActivity.class));
+                break;
+            case R.id.dialog:
+                startActivity(new Intent(getApplicationContext(), DialogActivity.class));
                 break;
         }
     }

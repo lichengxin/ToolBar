@@ -46,11 +46,11 @@ public class MyAlertDialog {
 	}
 
 	public MyAlertDialog builder() {
-		// 获取Dialog布局
+
 		View view = LayoutInflater.from(context).inflate(
 				R.layout.toast_view_alertdialog, null);
 
-		// 获取自定义Dialog布局中的控件
+
 		lLayout_bg = (LinearLayout) view.findViewById(R.id.lLayout_bg);
 		txt_title = (TextView) view.findViewById(R.id.txt_title);
 		txt_title.setVisibility(View.GONE);
@@ -68,11 +68,9 @@ public class MyAlertDialog {
 		img_line = (ImageView) view.findViewById(R.id.img_line);
 		img_line.setVisibility(View.GONE);
 
-		// 定义Dialog布局和参数
 		dialog = new Dialog(context, R.style.AlertDialogStyle);
 		dialog.setContentView(view);
 
-		// 调整dialog背景大小
 		lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (display
 				.getWidth() * 0.85), LayoutParams.WRAP_CONTENT));
 
@@ -82,7 +80,7 @@ public class MyAlertDialog {
 	public MyAlertDialog setTitle(String title) {
 		showTitle = true;
 		if ("".equals(title)) {
-			txt_title.setText("标题");
+			txt_title.setText("锟斤拷锟斤拷");
 		} else {
 			txt_title.setText(title);
 		}
@@ -92,7 +90,7 @@ public class MyAlertDialog {
 	public MyAlertDialog setEditText(String msg) {
 		showEditText = true;
 		if ("".equals(msg)) {
-			edittxt_result.setHint("内容");
+			edittxt_result.setHint("锟斤拷锟斤拷");
 		} else {
 			edittxt_result.setText(msg);
 		}
@@ -106,7 +104,7 @@ public class MyAlertDialog {
 	public MyAlertDialog setMsg(String msg) {
 		showMsg = true;
 		if ("".equals(msg)) {
-			txt_msg.setText("内容");
+			txt_msg.setText("锟斤拷锟斤拷");
 		} else {
 			txt_msg.setText(msg);
 		}
@@ -133,7 +131,7 @@ public class MyAlertDialog {
 			final OnClickListener listener) {
 		showPosBtn = true;
 		if ("".equals(text)) {
-			btn_pos.setText("确定");
+			btn_pos.setText("确锟斤拷");
 		} else {
 			btn_pos.setText(text);
 		}
@@ -151,7 +149,7 @@ public class MyAlertDialog {
 			final OnClickListener listener) {
 		showNegBtn = true;
 		if ("".equals(text)) {
-			btn_neg.setText("取消");
+			btn_neg.setText("取锟斤拷");
 		} else {
 			btn_neg.setText(text);
 		}
@@ -167,7 +165,7 @@ public class MyAlertDialog {
 
 	private void setLayout() {
 		if (!showTitle && !showMsg) {
-			txt_title.setText("提示");
+			txt_title.setText("锟斤拷示");
 			txt_title.setVisibility(View.VISIBLE);
 		}
 
@@ -189,7 +187,7 @@ public class MyAlertDialog {
 		}
 
 		if (!showPosBtn && !showNegBtn) {
-			btn_pos.setText("确定");
+			btn_pos.setText("确锟斤拷");
 			btn_pos.setVisibility(View.VISIBLE);
 			btn_pos.setBackgroundResource(R.drawable.alertdialog_single_selector);
 			btn_pos.setOnClickListener(new OnClickListener() {
