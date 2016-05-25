@@ -5,7 +5,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.android.toolbar.R;
 import com.android.toolbar.view.CountDownButtonHelper;
@@ -44,8 +43,6 @@ public class DialogActivity extends BaseActivity {
                      btn1.setText("重新发送");
                     }
                 });
-
-
 
                 helper.start();
 

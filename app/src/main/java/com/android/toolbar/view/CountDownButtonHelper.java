@@ -5,7 +5,7 @@ import android.util.Log;
 import android.widget.Button;
 
 /**
- * Created by li on 2016/5/21.
+ * Created by li on 2016/5/25.
  */
 public class CountDownButtonHelper {
 
@@ -34,12 +34,11 @@ public class CountDownButtonHelper {
             @Override
             public void onTick(long time) {
                 // 第一次调用会有1-10ms的误差，因此需要+15ms，防止第一个数不显示，第二个数显示2s
-                button.setText(defaultString + "(" + ((time + 15) / 1000)
-                        + "秒)");
+                button.setText(defaultString + ((time + 15) / 1000)
+                );
                 Log.d("CountDownButtonHelper", "time = " + (time) + " text = "
                         + ((time + 15) / 1000));
             }
-
 
 
             @Override
